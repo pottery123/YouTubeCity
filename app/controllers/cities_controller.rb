@@ -1,16 +1,10 @@
-
+require 'youtube.rb'
 class CitiesController < ApplicationController
-  def index
+
+  def self.johannesburg
+    johannesburg = YouTube.johannesburg
+    johannesburg
   end
-
-  def show
-    @videos = Yt::Collections::Videos.new
-    @viedo_id = @videos.where(id:'G1Ul-pTkd5g')
-    @viedo_id
-
-  end
-
-
 
 
 end

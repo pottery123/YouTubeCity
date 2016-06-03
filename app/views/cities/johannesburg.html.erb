@@ -1,4 +1,3 @@
-<H1> Hello City</H1>
-
-
-<iframe width="480" height="360" src="//www.youtube.com/embed/<%= CitiesController.johannesburg %>" frameborder="0" allowfullscreen></iframe>
+<%CitiesController.johannesburg.each do |id|%>
+<iframe width="480" height="360" src="//www.youtube.com/embed/<%=id%>" frameborder="0" allowfullscreen></iframe>
+<%end%>

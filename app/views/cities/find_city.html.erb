@@ -1,0 +1,20 @@
+
+<%= form_tag({controller: "cities", action: "find_city"}, method: "post") do %>
+<%= label_tag(:longitude, "longitude:")%>
+<%= text_field_tag(:longitude)%>
+<%= label_tag(:latitude, "latitude:")%>
+<%= text_field_tag(:latitude)%>
+<%= label_tag(:radius, "radius:")%>
+<%= text_field_tag(:radius)%>
+<%= submit_tag("Search")%>
+<% end %>
+
+<%=params%>
+
+
+
+
+
+
+
+<%=params%>

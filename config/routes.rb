@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
 
+  root 'cities#index'
+  post 'cities/johannesburg' => 'cities#johannesburg', as: 'johannesburg'
 
-  root 'cities#johannesburg'
-
+  post 'cities/find_city'    => 'cities#find_city',    as: 'find_city'
+  get 'cities/find_city'    => 'cities#find_city'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

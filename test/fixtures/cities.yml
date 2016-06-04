@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  long: MyString
+  lat: MyString
+  radius: MyString
+  take: 1
+  type: 
+
+two:
+  long: MyString
+  lat: MyString
+  radius: MyString
+  take: 1
+  type: 

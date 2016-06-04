@@ -9,7 +9,7 @@ class YouTube
 
   def self.find_city(longitude,latitude ,radius)
     videos = Yt::Collections::Videos.new
-    add_city = videos.where(location: "#{longitude},#{latitude}", locationRadius: "#{radius}").take(2).map(&:id)
+    add_city = videos.where(location: "#{longitude},#{latitude}", locationRadius: "#{radius}").take(20).map(&:id)
     add_city
   end
 end

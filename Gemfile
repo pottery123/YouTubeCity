@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
+gem 'dotenv-rails'
+gem "omniauth-google-oauth2"
+gem "omniauth"
+gem 'multipart-post', '2.0.0'
 gem 'bootstrap-sass'
 gem 'yt', '~> 0.25.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,6 +42,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'simplecov'
   gem 'minitest-reporters'
+  gem 'dotenv-rails'
+  gem 'better_errors'
 end
 
 group :development do

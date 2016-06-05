@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'cities#index'
   post 'cities/johannesburg' => 'cities#johannesburg', as: 'johannesburg'
+  post 'cities/alice_springs' => 'cities#alice_springs', as: 'alice_springs'
 
   post 'cities/find_city'    => 'cities#find_city',    as: 'find_city'
   get 'cities/find_city'     => 'cities#find_city',    as: 'find_city_form'

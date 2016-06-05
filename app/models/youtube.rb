@@ -7,6 +7,7 @@ class YouTube
     joburg
   end
 
+
   def self.find_city(latitude,longitude,radius)
     videos = Yt::Collections::Videos.new
 

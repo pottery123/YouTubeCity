@@ -44,7 +44,9 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'dotenv-rails'
   gem 'better_errors'
+  gem 'httparty'
 end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views

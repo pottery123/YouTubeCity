@@ -1,15 +1,19 @@
 <H1> Hello City</H1>
 
-<%= form_tag({controller: "cities", action: "find_city"}, method: "get") do %>
-<%= label_tag(:longitude, "longitude:")%>
-<%= text_field_tag(:longitude)%>
-<%= label_tag(:latitude, "latitude:")%>
-<%= text_field_tag(:latitude)%>
+
+
+<%= form_tag({controller: "cities", action: "find_location"}, method: "get") do %>
+<%= label_tag(:keyword, "Location")%>
+<%= text_field_tag(:keyword)%>
 <%= label_tag(:radius, "radius:")%>
 <%= text_field_tag(:radius)%>
 <%= submit_tag("Search")%>
-<% end %>
+<%end%>
 
-
+<%if @location.nil?%>
+<%else%>
+<%=@location['results'][0]['geometry']['location']['lat']%>
+<%=@location['results'][0]['geometry']['location']['lng']%>
+<%end%>
 
 <%= button_to "johannesburg", johannesburg_path %><br>

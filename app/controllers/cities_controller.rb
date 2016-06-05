@@ -1,4 +1,5 @@
 require 'youtube.rb'
+require 'geocoder.rb'
 class CitiesController < ApplicationController
 
 
@@ -8,11 +9,18 @@ class CitiesController < ApplicationController
     johannesburg
   end
 
-  def find_city
-    longitude = params[:longitude]
-    latitude = params[:latitude]
+  def find_city(latitude,longitude,radius)
+    @add_city = YouTube.find_city(latitude,longitude,radius)
+  end
+
+  def find_location
+    userword = params[:keyword]
     radius = params[:radius]
-    @add_city = YouTube.find_city(longitude,latitude,radius)
-    @add_city
+
+    @location = GeoCoder.find_place(userword)
+    lng = @location['results'][0]['geometry']['location']['lng']
+    lat = @location['results'][0]['geometry']['location']['lat']
+    find_city(lat, lng, radius)
+
   end
 end

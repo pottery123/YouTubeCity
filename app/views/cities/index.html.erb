@@ -6,7 +6,9 @@
 <%= label_tag(:keyword, "Location")%>
 <%= text_field_tag(:keyword)%>
 <%= label_tag(:radius, "radius:")%>
-<%= text_field_tag(:radius)%>
+<%= select_tag(:radius, options_for_select([['10km'], ['100km'],['1000km']])) %>
+
+
 <%= submit_tag("Search")%>
 <%end%>
 
@@ -16,4 +18,8 @@
 <%=@location['results'][0]['geometry']['location']['lng']%>
 <%end%>
 
-<%= button_to "johannesburg", johannesburg_path %><br>
+<%= button_to "Johannesburg", johannesburg_path %><br>
+
+<%= button_to "Madrid", madrid_path %><br>
+
+<%= button_to "Alice Springs", alice_springs_path %><br>

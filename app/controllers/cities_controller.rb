@@ -34,9 +34,13 @@ class CitiesController < ApplicationController
   def find_location
     userword = params[:keyword]
     radius = params[:radius]
+    if userword != ''
     @location = GeoCoder.find_place(userword)
     @lng = @location['results'][0]['geometry']['location']['lng']
     @lat = @location['results'][0]['geometry']['location']['lat']
     find_city(@lat, @lng, radius)
+    else
+      redirect_to root_path
+    end
   end
 end

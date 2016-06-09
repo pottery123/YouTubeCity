@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'dotenv-rails'
+gem 'pg'
 gem "omniauth-google-oauth2"
 gem "omniauth"
 gem 'multipart-post', '2.0.0'
@@ -51,6 +51,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'pg'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

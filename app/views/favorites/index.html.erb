@@ -1,0 +1,9 @@
+<%link_to "create new information", new_favorite_path%>
+
+<%@favorites.each do |favorite|%>
+Firstname:<%=favorite.lng%>
+Lastname:<%=favorite.lat%>
+Lastname:<%=favorite.keyword%>
+Lastname:<%=favorite.radius%>
+<%=link_to "Delete information", favorite_path(favorite), :data => {:confirm => "are you sure?"},:method => :delete%>
+<%end%>

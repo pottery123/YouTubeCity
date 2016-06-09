@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160604191128) do
+ActiveRecord::Schema.define(version: 20160607064623) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "long"
@@ -19,6 +19,24 @@ ActiveRecord::Schema.define(version: 20160604191128) do
     t.string   "radius"
     t.integer  "take"
     t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "lat"
+    t.string   "lng"
+    t.string   "keyword"
+    t.string   "radius"
+  end
+
+  create_table "my_cities", force: :cascade do |t|
+    t.string   "keyword"
+    t.string   "lat"
+    t.string   "lng"
+    t.string   "radius"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

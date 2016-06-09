@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  background-image:url(city.jpg);
+  background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+}
+
+tr  {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}

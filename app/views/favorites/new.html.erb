@@ -1,0 +1,13 @@
+<%= form_for @favorites do |f|%>
+<p>
+  <%=f.label :firstname%>
+  <%=f.text_field :firstname%>
+</p>
+
+<p>
+  <%=f.label :lastname%>
+  <%=f.text_field :lastname%>
+</p>
+
+<%=f.submit "submit"%>
+<%end%>

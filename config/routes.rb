@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post 'cities/find_city'    => 'cities#find_city',    as: 'find_city'
   get 'cities/find_city'     => 'cities#find_city',    as: 'find_city_form'
 
-
+  resources :favorites
 
 
   get 'auth/:provider/callback', to: 'sessions#create'
